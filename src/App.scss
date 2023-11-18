@@ -1,0 +1,14 @@
+@use './assets/scss/variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-inter;
+  background-color: v.$blue-dark;
+  max-width: 86rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,20 @@
+.header__input {
+  display: none;
+  background-color: #2d415b;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 16px 14px;
+  font-size: 1rem;
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    display: inline-block;
+  }
+}
+
+.header__iconClose {
+  display: none;
+}

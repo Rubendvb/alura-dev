@@ -1,7 +1,12 @@
+import Profile from '../Profile/Profile'
+import InputSearch from '../InputSearch/InputSearch'
+
 import Logo from './../../assets/images/Logo.svg'
 import SearchIcon from './../../assets/images/searchIcon.png'
 import MenuIcon from './../../assets/images/menu.png'
-import PhotoProfile from './../../assets/images/Photo.png'
+import CloseIcon from './../../assets/images/close-icon.png'
+import CodeIcon from './../../assets/images/code-icon.svg'
+import GroupIcon from './../../assets/images/group-icon.svg'
 
 import './Header.scss'
 
@@ -11,23 +16,35 @@ export default function Header() {
       <img className="header__img" src={Logo} alt="Logo AluraDev" />
 
       <div className="header__searchContainer">
-        <img className="header__iconSearch" src={SearchIcon} alt="" />
+        <div className="header__containerSearch">
+          <input className="header__checkboxSearch" type="checkbox" />
+          <img className="header__iconSearch" src={SearchIcon} alt="" />
+          <InputSearch />
+        </div>
 
-        <input
-          className="header__input"
-          type="text"
-          name=""
-          id=""
-          placeholder="Busque por algo"
-        />
+        <div className="header__inputContainer">
+          <input className="header__inputCheckbox" type="checkbox" />
+          <img className="header__menuHamburger" src={MenuIcon} alt="" />
+          <img className="header__closeIcon" src={CloseIcon} alt="" />
 
-        <img className="header__menuHamburger" src={MenuIcon} alt="" />
+          <nav className="header__nav">
+            <ul className="header__nav__ul">
+              <li className="header__nav__ul__li">
+                <img src={CodeIcon} alt="" />
+                Editor de código
+              </li>
+              <li className="header__nav__ul__li">
+                <img src={GroupIcon} alt="" />
+                Comunidade
+              </li>
+            </ul>
+
+            <Profile />
+          </nav>
+        </div>
       </div>
 
-      <div className="header__profileContainer">
-        <img src={PhotoProfile} alt="" />
-        <span>Harry</span>
-      </div>
+      <Profile />
     </header>
   )
 }

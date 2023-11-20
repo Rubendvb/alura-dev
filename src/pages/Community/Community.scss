@@ -1,5 +1,11 @@
 @use '../../assets/scss/variables' as v;
 
+.community {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .communityCard {
   background-color: rgba(0, 0, 0, 0.16);
   border-radius: 8px;

@@ -1,0 +1,18 @@
+@use './variables' as v;
+
+@mixin input {
+  background-color: rgba(255, 255, 255, 0.16);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 14px;
+  color: #fff;
+  font-family: v.$font-inter;
+  outline: none;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.64;
+  }
+}

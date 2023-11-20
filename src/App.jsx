@@ -1,10 +1,27 @@
+import { Outlet } from 'react-router-dom'
+
 import './App.scss'
-import Header from './components/Header/Header'
 
 function App() {
   return (
     <>
-      <Header />
+      <main className="main">
+        {/* <aside>
+          Menu
+          <nav>
+            <ul>
+              <li>
+                <Link to={'/editor'}>Editor</Link>
+              </li>
+              <li>
+                <Link to={'/community'}>Comunidade</Link>
+              </li>
+            </ul>
+          </nav>
+        </aside> */}
+
+        <Outlet />
+      </main>
     </>
   )
 }

@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+
 import Profile from '../Profile/Profile'
 import InputSearch from '../InputSearch/InputSearch'
 
@@ -11,6 +14,13 @@ import GroupIcon from './../../assets/images/group-icon.svg'
 import './Header.scss'
 
 export default function Header() {
+  const [showMenu, setShowMenu] = useState(false)
+
+  const handleMenu = () => {
+    console.log(showMenu)
+
+    setShowMenu(true)
+  }
   return (
     <header className="header">
       <img className="header__img" src={Logo} alt="Logo AluraDev" />
@@ -27,15 +37,17 @@ export default function Header() {
           <img className="header__menuHamburger" src={MenuIcon} alt="" />
           <img className="header__closeIcon" src={CloseIcon} alt="" />
 
-          <nav className="header__nav">
+          <nav className={`header__nav ${showMenu ? 'header__nav__show' : ''}`}>
             <ul className="header__nav__ul">
-              <li className="header__nav__ul__li">
+              <li className="header__nav__ul__li" onClick={() => handleMenu()}>
                 <img src={CodeIcon} alt="" />
-                Editor de código
+
+                <Link to={'/editor'}>Editor de código</Link>
               </li>
-              <li className="header__nav__ul__li">
+              <li className="header__nav__ul__li" onClick={() => handleMenu()}>
                 <img src={GroupIcon} alt="" />
-                Comunidade
+
+                <Link to={'/community'}>Comunidade</Link>
               </li>
             </ul>
 

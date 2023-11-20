@@ -1,26 +1,11 @@
+import CardCode from '../../components/CardCode/CardCode'
 import './Editor.scss'
 
 export default function Editor() {
-  const code = `const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) 
-   
-  const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-  
-  const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-  }
-  return go(f, seed, []) }`
-
   return (
     <section className="editor">
       <div className="editor__containerCode">
-        <div className="editor__bg">
-          <div className="editor__bgCode">
-            <div className="editor__circle"></div>
-            <code className="editor__code">{code}</code>
-          </div>
-        </div>
+        <CardCode />
 
         <button className="editor__button">Visualizar com o highlight</button>
       </div>

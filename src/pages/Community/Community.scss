@@ -1,0 +1,62 @@
+@use '../../assets/scss/variables' as v;
+
+.communityCard {
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding-bottom: 24px;
+
+  &__header {
+    padding: 24px;
+
+    h2 {
+      color: #fff;
+      font-family: v.$font-inter;
+      font-size: 1.313rem;
+      font-weight: 700;
+      line-height: 31.5px;
+    }
+
+    p {
+      margin-top: 8px;
+      color: #fff;
+      font-family: v.$font-inter;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 24px;
+      opacity: 0.8;
+    }
+  }
+
+  &__footer {
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      color: #fff;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    &__profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+
+      span {
+        font-family: v.$font-inter;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

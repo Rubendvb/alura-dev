@@ -1,11 +1,42 @@
+import CardCode from '../../components/CardCode/CardCode'
+
+import Comment from '../../assets/images/comment.svg'
+import Heart from '../../assets/images/heart.svg'
+import Photo from '../../assets/images/Photo.png'
+
+import './Community.scss'
+
 export default function Community() {
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi
-        ad nostrum culpa totam suscipit iste in a, accusamus voluptatem, dolores
-        deserunt explicabo placeat debitis nemo odit hic expedita ea?
-      </p>
-    </div>
+    <section>
+      <article className="communityCard">
+        <CardCode />
+
+        <div className="communityCard__header">
+          <h2>Título do projeto</h2>
+
+          <p>Essa é a descrição do meu projeto.</p>
+        </div>
+
+        <div className="communityCard__footer">
+          <div className="communityCard__footer__info">
+            <div>
+              <img src={Comment} alt="" />
+              <span>9</span>
+            </div>
+
+            <div>
+              <img src={Heart} alt="" />
+              <span>9</span>
+            </div>
+          </div>
+
+          <div className="communityCard__footer__profile">
+            <img src={Photo} alt="" />
+            <span>@Harry</span>
+          </div>
+        </div>
+      </article>
+    </section>
   )
 }
